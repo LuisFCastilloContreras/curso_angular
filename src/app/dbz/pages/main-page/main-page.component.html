@@ -1,0 +1,23 @@
+<h1>DBZ Personajes</h1>
+<hr>
+<div class="row">
+  <div class="col">
+    <dbz-list [characterList]="characters" (onDeleteCharacter)="onDeleteCharacter($event)"></dbz-list>
+  </div>
+  <div class="col">
+    <!--PASO 5 COLOCAR EL OUTPUT EN EL SELECTOR DONDE SE ENCUENTRA EL FORMULARIO
+    PARA ESCUCHAR EL EVENTO Y SEGUIDO LO QUE SE ESCUCHA SE CACHA CON EL $event
+    recibir en este caso lo que manda el componente hijo
+    padre (main page ) hijo(add character)
+    como el output esta definido de tipo character el $event tambien sera de tipo character-->
+    <!--si se quiere escuchar el evento cuando el add-character envie o emita el character
+    para los input se utilizan corchetes[]
+    para los output se utilizan parentesis()
+    en este caso particular se define un metodo en el componente
+    que reciba el character que se esta emitiendo, y del lado del html
+    se pasa el parametro como tipo $event que esta definido por el onNewCharacter que debe ser de tipo character
+  -->
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+  </div>
+</div>
+

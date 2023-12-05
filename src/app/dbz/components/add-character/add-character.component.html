@@ -1,0 +1,19 @@
+<h4>Agregar personaje</h4>
+<!--PASO 3 PONER EL EL NGSUBMIT EN EL FORMULARIO PARA QUE LLAME AL METODO
+QUE EMITE AL PRESIONAR ENTER O CLICK-->
+<form class="row" (ngSubmit)="emitCharacter()">
+  <input type="text"
+  class="form-control mb-2"
+  placeholder="Nombre"
+  [(ngModel)]="character.name"
+  name="name"
+  >
+  <input type="number"
+  class="form-control mb-2"
+  placeholder="Poder"
+  [(ngModel)]="character.power"
+  name="power"
+  >
+  <button type="submit" class="btn btn-primary">Agregar</button>
+
+</form>
